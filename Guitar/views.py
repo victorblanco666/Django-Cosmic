@@ -10,3 +10,7 @@ def index(request):
 def login(request):
     context= {}
     return render(request,'Guitar/login.html',context)
+
+def register(request):
+    context= {}
+    return render(request,'Guitar/register.html',context)
