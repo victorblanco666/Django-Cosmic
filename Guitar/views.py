@@ -14,3 +14,15 @@ def login(request):
 def register(request):
     context= {}
     return render(request,'Guitar/register.html',context)
+
+def nivel1(request):
+    context={}
+    return render(request,'Guitar/nivel-1.html',context)
+
+def nivel2(request):
+    context={}
+    return render(request,'Guitar/nivel-2.html',context)
+
+def nivel3(request):
+    context={}
+    return render(request,'Guitar/nivel-3.html',context)

@@ -4,14 +4,16 @@
     padding: 0;
 }
 body{
-    background: url("/media/Nebula/nebula\ pink.jpg") no-repeat center center;
+
+    background: url("/Guitar/static/Guitar/media/nebula\ pink.jpg") no-repeat center center;
     box-sizing: border-box;
+    color: blueviolet;
 }
 
 
 
 .title{
-    color: whitesmoke;
+    color: rgb(9, 9, 9);
     padding-bottom: 5%;
     font-size: 2.5rem;
     text-align: center;
@@ -53,7 +55,7 @@ body{
 }
 
 footer{
-    color: whitesmoke;
+    color: rgb(16, 15, 15);
     margin-top: 10%;
 }
 
