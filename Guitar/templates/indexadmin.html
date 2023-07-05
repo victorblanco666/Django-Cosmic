@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMINISTRADOR</title>
+    <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1 class="titulo">MENÚ <br> ADMINISTRADOR</h1>
+        </div>
+        <table> 
+            <thead>
+                <tr class="titulos">
+                    <th>ID</th>
+                    <th>Usuario</th>
+                    <th>Contraseña</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th>    
+                        <a href="{% url 'agregarUsuario' %}" class="btn-1">+</a>
+                    </th>
+                    </tr>
+            </thead>
+            <tbody>
+                {% for u in usuarios %}
+                <tr>
+                    <td>{{u.id_usuario}}</td>
+                    <td>{{u.usuario}}</td>
+                    <td>{{u.contraseña}}</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="{% url 'encontrarUsuario' pk=u.id_usuario %}">Modificar</a></td>
+                    <td>     <a href="{% url 'eliminarUsuario'  pk=u.id_usuario %}">Eliminar</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+</body>
+</html>

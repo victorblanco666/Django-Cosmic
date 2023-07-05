@@ -1,0 +1,34 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url("/media/Nebula/nebula\ pink.jpg") no-repeat center center;
+    box-sizing: border-box;
+    color: whitesmoke;
+    box-sizing: cover;
+    
+}
+
+#busqueda{
+    padding-top: 5%;
+}
+
+
+footer{
+    color: black;
+    padding-top: 30%;
+}
+
+
+
+
+.pie-pagina{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20%;
+}
+
+
