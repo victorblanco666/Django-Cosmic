@@ -5,14 +5,13 @@
     font-family: sans-serif;
 }
 
-body{
+body {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: white;
+    background: purple; 
 }
-
 
 table{
     border: solid 1px black;
@@ -26,24 +25,29 @@ thead{
     background-color: black;
 }
 
-.titulos{
-    color: white;
+.titulo{
+    padding-bottom: 40px;
+    text-align: center;
+    color: white; 
+    font-family: 'Rock Salt', cursive; 
 }
-
 th{
     padding: 20px 15px;
     font-weight: 700;
     text-transform: uppercase;
+    color: white;
 }
 
 td{
     padding: 15px 40px;
     border-bottom: solid 1px black;
     font-size: 15px;
+    color: purple;
 }
 
 tbody tr{
     cursor: pointer;
+    background-color: white; 
 }
 
 tbody tr:hover{
@@ -53,8 +57,9 @@ tbody tr:hover{
 .btn-1{
     display: inline-block;
     padding: 10px 17px;
-    border: 1px solid #FBFCFF;
-    color: #FBFCFF;
+    border: 1px solid purple;
+    color: white;
+    background-color: purple;
     border-radius: 15px;
     font-size: 20px;
     text-transform: capitalize;
@@ -63,4 +68,5 @@ tbody tr:hover{
 .titulo{
     padding-bottom: 40px;
     text-align: center;
+    color: black;
 }

@@ -16,7 +16,7 @@ body {
 form {
     display: flex;
     flex-direction: column;
-    background: black;
+    background: black; 
     text-align: center;
     padding: 50px 40px;
     box-shadow: 0 5px 10px rgba(79, 79, 79, 0.7);
@@ -27,6 +27,7 @@ form .title {
     font-size: 30px;
     font-weight: 800;
     margin-bottom: 50px;
+    font-family: 'Rock Salt', cursive;
 }
 
 form label {
@@ -44,14 +45,14 @@ form label .fa-solid {
 form label input {
     outline: none;
     border: none;
-    color: black;
-    border-bottom: solid 1px black;
+    color: purple;
+    border-bottom: solid 1px purple;
     padding: 0 8px;
     font-size: 18px;
 }
 
 form label input::placeholder {
-    color: black;
+    color: purple;
 }
 
 
@@ -63,13 +64,13 @@ form .link {
 input[type="submit"]{
     color: black;
     border: none;
-    background: white;
+    background: purple;
     padding: 10px 15px;
     cursor: pointer;
     font-size: 20px;
 }
 
 input[type="submit"]:hover{
-    color: black;
+    color: white;
     background-color: aqua;
 }
