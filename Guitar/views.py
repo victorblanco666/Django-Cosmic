@@ -26,3 +26,8 @@ def nivel2(request):
 def nivel3(request):
     context={}
     return render(request,'Guitar/nivel-3.html',context)
+
+
+def news(request):
+    context={}
+    return render(request,'Guitar/news.html')
