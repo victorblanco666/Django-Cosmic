@@ -1,35 +1,36 @@
-from pyexpat.errors import messages
-from django.shortcuts import redirect, render
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from Guitar.models import Usuario
-
 # Create your views here.
 
 
 def indexadmin(request):
+    if not request.user.is_staff:  
+        return render(request, 'error.html')
     usuarios = Usuario.objects.all()
     context={'usuarios':usuarios}
     return render(request, '../templates/indexadmin.html', context)
 
+from django.contrib.auth.models import User
+from django.contrib.auth.hashers import make_password
 
 def agregarUsuario(request):
-        if request.method != "POST":
-            usu=Usuario.objects.all()
-            context={'usu':usu}
-            return render(request,'../templates/agregarUsuario.html',context)
-        else:
-            #Es un POST,por lo tanto se recuperan los datos del formulario
-            nombre=request.POST["usuario"]
-            contra=request.POST["contra"]
+    if request.method == 'POST':
+        username=request.POST["username"]
+        password=request.POST["password"]
+        admin=request.POST.get('admin') in ['True', 'true', '1']
+        
+        # Crear el usuario
+        user = User(username=username, password=make_password(password), is_staff=admin, is_superuser=admin)
+        user.save()
 
-            
-            obj=Usuario.objects.create(
-                                    usuario=nombre,
-                                    contraseña=contra)
-            obj.save()
-            context={'mensaje':'OK, datos guardados con éxito'}
-            return render(request,'../templates/agregarUsuario.html',context)
-
-
+        context={'mensaje':'OK, datos guardados con éxito'}
+        return render(request,'../templates/agregarUsuario.html',context)
+    else:
+        usu=Usuario.objects.all()
+        context={'usu':usu}
+        return render(request,'../templates/agregarUsuario.html',context)
 def encontrarUsuario(request, pk):
     usuario = Usuario.objects.get(id_usuario=pk)
     if usuario:

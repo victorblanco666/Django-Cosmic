@@ -2,16 +2,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADMINISTRADOR</title>
+    <title>ADMINISTRADOR
+    </title>
+    <title>hola</title>
     <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/admin.css' %}">
 </head>
 <body>
+    
     <div class="container">
         <div>
             <h1 class="titulo">MENÚ <br> ADMINISTRADOR</h1>
+            {% if user.is_autenticated %}
+            
+            {% else %}
+            <button type="submit"><li><a href="{% url 'index' %}">cerrar secion</a></li></button>
+            
+            {% endif %}
         </div>
         <table> 
             <thead>
