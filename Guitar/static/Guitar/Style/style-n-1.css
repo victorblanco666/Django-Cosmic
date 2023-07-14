@@ -5,7 +5,7 @@
 }
 body{
 
-    background: url("/Guitar/static/Guitar/media/nebula\ pink.jpg") no-repeat center center;
+    background: url("../media/Heart.jpg") no-repeat center center;
     box-sizing: border-box;
     color: blueviolet;
 }
@@ -55,7 +55,7 @@ body{
 }
 
 footer{
-    color: rgb(16, 15, 15);
+    color: rgb(223, 16, 16);
     margin-top: 10%;
 }
 
