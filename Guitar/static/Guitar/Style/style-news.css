@@ -4,9 +4,9 @@
     padding: 0;
 }
 body{
-    background: url("/media/Nebula/nebula\ pink.jpg") no-repeat center center;
+    background: url("../media/Heart.jpg") no-repeat center center;
     box-sizing: border-box;
-    color: black;
+    color: rgb(236, 221, 221);
     box-sizing: cover;
     
 }
@@ -17,7 +17,7 @@ body{
 
 
 footer{
-    color: black;
+    color: rgb(236, 221, 221);  
     padding-top: 30%;
 }
 

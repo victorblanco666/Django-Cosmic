@@ -34,7 +34,7 @@ form.addEventListener("submit", e=>{
     if(user.value.length >6 && regexEmail.test(email.value) && pass.value.length >=8){
         alert
         entrar = true
-        window.location = "/index.html"
+        window.location.href = "#"
     }
     
 })
